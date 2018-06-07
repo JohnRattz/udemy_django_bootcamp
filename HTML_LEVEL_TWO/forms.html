@@ -7,23 +7,56 @@
 </head>
 
 <body>
-    <form action="https://www.google.com" method="get">
+    <!-- Form with an action -->
+  <!--   <form action="https://www.google.com" method="get">
+        <h1>This form takes you to google</h1>
+        <input type="email" name="useremail" placeholder="Email Here">
+        <input type="submit" placeholder="To Google">
+    </form> -->
+    <!-- <hr> -->
+    <!-- Form with labels and color selection -->
+  <!--   <form method="get">
         <h1>Log In</h1>
         <h2>Please Input your Email and Password</h2>
-        <input type="email" name="useremail" value="Email Here">
-        <input type="password" name="userpassword" value="Password Please">
+        <input type="email" name="useremail" placeholder="Email Here">
+        <input type="password" name="userpassword" placeholder="Password Please">
         <input type="submit" value="Submit">
-        <hr>
         <h1>Choose Color!</h1>
         <h2>Click on Button!</h2>
         <input type="color">
-        <hr>
         <label for="userinput">Enter Input:</label>
-        <input type="text" name="" placeholder="not required">
-        <input type="text" name="" placeholder="Enter Text Here">
+        <label for="userinput">Enter Input:</label>
+        <label for="userinput">Enter Input:</label>
+        <input id="userinput" type="text" name="" placeholder="not required">
+        <hr>
+        <input type="text" name="" placeholder="Required" required>
+        <hr>
         <input type="submit" name="" placeholder="Submit">
-    </form>
+    </form> -->
     <hr>
+    <!-- Form with radio buttons -->
+    <form method="get">
+        <h1>Hotel Feedback Form</h1>
+
+        <h2>Are you from inside or outside the US?</h2>
+        <!-- <input> tags must have the same name to be related. In this case, only one may be selected. -->
+        <label for="inusa">Inside: </label>
+        <input id="inusa" type="radio" name="loc" value="inside">
+        <label for="outusa">Outside: </label>
+        <input id="outusa" type="radio" name="loc" value="outside">
+
+        <h2>How was your service?</h2>
+        
+        <select name="stars">
+            <option value="Great">3</option>
+            <option value="OK">2</option>
+            <option value="Bad">1</option>
+        </select>
+
+        <h2>Any other feedback?</h2>
+        <textarea name="mytext" rows="8" cols="80"></textarea>
+        <input type="submit" name="" value="Submit">
+    </form>
 </body>
 
 </html>
