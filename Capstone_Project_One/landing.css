@@ -5,8 +5,8 @@ body {
     background-color: #011627;
     border: 60px solid #2EC4B6;
     border-top: 0px;
-    /*border-bottom: 0px;*/
-    margin: 0px;
+    /*Browsers usually apply a small margin*/
+    margin: 0px; 
 }
 
 p {
