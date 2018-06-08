@@ -1,0 +1,13 @@
+/* Comment */
+h1{
+	color: red; /*Color name*/
+}
+
+li{
+	/*RGB*/
+	/*color: rgb(10,105,10); */
+	/*Hexadecimal color code*/
+	color: #28D35C;
+	/*RGBA*/
+	color: rgba(10,150,10,0.5);
+}
