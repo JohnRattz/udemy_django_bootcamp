@@ -25,7 +25,11 @@ p{
   font-size: 10px;
 }
 
-#two{
+#two{ 
+  /*In many browsers, 1em == 16px,
+   but it is relative to the parent, which will 
+   be <body> in this case, which above is 
+   given a font size of 20px, so this is 40px*/
   font-size: 2.0em;
 }
 
