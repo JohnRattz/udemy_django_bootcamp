@@ -1,11 +1,14 @@
-li{ /*Tag selectors have lowest specificity*/
-	color: red;
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity*/
+/*https://designshack.net/articles/css/what-the-heck-is-css-specificity/*/
+
+li{
+  color: red;
 }
 
-.topitems{ /*Class selectors have intermediate specificity*/
-	color: blue;
+.TopItems{
+  color: blue;
 }
 
-#two{ /*ID Selectors have the highest specificity*/
-	border: 3px solid black;
+#two{
+  border: 2px solid black;
 }
