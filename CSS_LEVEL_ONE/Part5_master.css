@@ -1,0 +1,11 @@
+li{ /*Tag selectors have lowest specificity*/
+	color: red;
+}
+
+.topitems{ /*Class selectors have intermediate specificity*/
+	color: blue;
+}
+
+#two{ /*ID Selectors have the highest specificity*/
+	border: 3px solid black;
+}
