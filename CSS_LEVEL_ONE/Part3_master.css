@@ -1,0 +1,29 @@
+.firstDiv{
+	color: blue;
+}
+
+.secondDiv{
+	color: red;
+}
+
+#singledout{
+	color: green;
+	text-decoration: line-through;
+}
+
+/*Known as "adjacent siblings" - 
+  select all ul immediately after h3*/
+h3+ul{ 
+	border: 4px dotted purple;
+}
+
+/*Known as "descendants"*/
+li a{
+	color: red;
+}
+
+/*Selecting descendants with particular attribute values*/
+li a[href='www.google.com']{
+	color: blue;
+	border: 5px solid orange;
+}
