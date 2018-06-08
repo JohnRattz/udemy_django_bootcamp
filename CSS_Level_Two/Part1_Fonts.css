@@ -39,6 +39,8 @@ p{
 p{
   font-style: italic;
   font-weight: bold;
+  /*font-family: 'Barrio', cursive;*/
+  font-family: 'AlexBrushRegular'; 
 }
 
 /*Text Properties*/
