@@ -100,26 +100,26 @@ for(var i = 0;i<arr.length;i++){
 
 var arr = ['A','B','C']
 // Don't do this!
-for (letter in arr) {
-  alert(letter);
+for (i in arr) { // for in is not like C++/Java for each (in gives index)
+  console.log(i);
 }
 
 // Because of this you will want to use a for/of loop. For example:
-for (letter of arr) {
-  alert(letter);
+for (letter of arr) { // for of is not like C++/Java for each
+  console.log(letter);
 }
 
 // But notice that it may be very common to issue a function for every element
 // in an array, so common in fact, that an array has a special method for this.
 // It's called the forEach method, check it out:
 
-arr.forEach(alert);
+arr.forEach(console.log);
 
 // Let's show another example:
 function awesomeAdder(name){
   console.log(name+" is awesome")
 }
 
-var topics = ["python",'djang','science']
+var topics = ["python",'django','science']
 
 topics.forEach(awesomeAdder);

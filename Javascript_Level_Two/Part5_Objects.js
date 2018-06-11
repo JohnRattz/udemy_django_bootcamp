@@ -33,7 +33,10 @@ carInfo['year'];
 
 // Show Entire Object:
 // Sometimes differs by browser -
-console.dir(carInfo);
+console.log('console.dir(carInfo)');
+console.dir(carInfo); // Shows more than console.log().
+console.log('console.log(carInfo)'); 
+console.log(carInfo);
 
 // Iterate through object:
 for (var key in carInfo) {
@@ -58,31 +61,31 @@ var carInfo = {
   make: "Toyota",
   year: 1990 ,
   model: "Camry" ,
-  carAlert: function(){
-    alert("We've got a car here!")
+  carLog: function(){
+    console.log("We've got a car here!")
   }
 };
 
 // Then you can call it!
-carInfo.carAlert()
+carInfo.carLog()
 
 // But what if you (more realistically) want to actually reference an object's
-// key-value pairs. For instance, if we want ot include this in our alert?
+// key-value pairs. For instance, if we want to include this in our alert?
 
 // You'll need to use the "this" keyword
 var carInfo = {
   make: "Toyota",
   year: 1990 ,
   model: "Camry" ,
-  carAlert: function(){
-    alert('Your car info is, make: '+this.make+ " year: "+this.year+ " model:"+this.model)
+  carLog: function(){
+    console.log('Your car info is, make: '+this.make+ " year: "+this.year+ " model:"+this.model)
   }
 };
 
 // The "this" keyword can be pretty confusing for beginners, and it behaves
 // differently in different situations of use-cases. We will dive deeper into it
 // later on. For now, think of it as a way to point out what you are trying to reference.
-// For instance, if we didn't have this.make in the previous carAlert example,
+// For instance, if we didn't have this.make in the previous carLog example,
 // Javascript would have been confused, are we referring to a global variable
 // called "make"? Or the key called "make", the this keyword trys to help make
 // clear that sort of distinction.

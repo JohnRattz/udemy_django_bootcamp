@@ -74,26 +74,23 @@ helloSomeone()
 // the results so that we could assign them to a variable, we can use the return
 // keyword for this task in the following manner:
 
-// EXAMPLE
+// EXAMPLE (only leave one uncommented)
 
 // Without Return
-function formal(name="Sam",title="Sir"){
-    console.log(title+" "+name)
-}
+// function formal(name="Sam",title="Sir"){
+//     console.log(title+" "+name)
+// }
 
-//
-"Welcome " + formal()
-// Welcome undefined
-
+// "Welcome undefined"
+console.log("Welcome " + formal())
 
 // With a return
 function formal(name="Sam",title="Sir"){
     return title+" "+name;
 }
 
-//
-"Welcome "+formal()
-//
+// "Welcome Sir Sam"
+console.log("Welcome "+formal())
 
 var result = formal()
 
@@ -114,11 +111,11 @@ function times5(numInput) {
   return result
 }
 
-times5(5)
+console.log(times5(5))
 
 // Now after running the function try calling:
-numInput // Error
-result // Error
+// numInput // Error
+// result // Error
 
 // Not defined outside the scope of the function!
 
@@ -133,13 +130,15 @@ var stuff = "I'm global stuff"
 
 function fun(stuff){
     console.log(v);
+    // If commented, the below print will be "undefined" for the `fun()` call,
+    // since no value for the `stuff` parameter is passed in.
     stuff = "Reassign stuff inside func";
     console.log(stuff);
 }
 
 // Now see what happens!
 fun()
-
+console.log(stuff)
 // So what is happening above? The following happens
 // console.log(v); will check for the global variable v, the outer scope
 // console.log(stuff); will also check for the global variable stuff

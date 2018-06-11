@@ -24,9 +24,12 @@
 // sleepIn(false, true) → true
 
 function sleepIn(weekday, vacation) {
-    //Code Goes Here
+    return (!weekday || vacation) 
 }
 
+console.log(sleepIn(false, false)) // true
+console.log(sleepIn(true, false)) // false
+console.log(sleepIn(false, true)) // true
 
 //
 // PROBLEM 2: MONKEY TROUBLE
@@ -42,9 +45,12 @@ function sleepIn(weekday, vacation) {
 // monkeyTrouble(true, false) → false
 
 function monkeyTrouble(aSmile, bSmile) {
-    //Code Goes Here
+    return ((aSmile && bSmile) || (!aSmile && !bSmile)) 
 }
 
+console.log(monkeyTrouble(true, true)) // true
+console.log(monkeyTrouble(false, false)) // true
+console.log(monkeyTrouble(true, false)) // false
 
 //
 // PROBLEM 3: STRING TIMES
@@ -59,8 +65,12 @@ function monkeyTrouble(aSmile, bSmile) {
 // stringTimes("Hi", 1) → "Hi"
 
 function stringTimes(str, n) {
-    //Code Goes Here
+    return str.repeat(n)
 }
+
+console.log(stringTimes("Hi", 2)) // "HiHi"
+console.log(stringTimes("Hi", 3)) // "HiHiHi"
+console.log(stringTimes("Hi", 1)) // "Hi"
 
 // PROBLEM 4: LUCKY SUM
 
@@ -76,10 +86,25 @@ function stringTimes(str, n) {
 // luckySum(1, 2, 13) → 3
 // luckySum(1, 13, 3) → 1
 
-function luckySum(a, b, c){
-
-  //Code Goes Here
+function luckySum(a, b, c) {
+    if (a == 13) {
+        return 0;
+    }
+    var sum = a;
+    if (b == 13) {
+        return sum;
+    }
+    sum += b;
+    if (c == 13) {
+        return sum;
+    }
+    sum += c;
+    return sum;
 }
+
+console.log(luckySum(1, 2, 3)) // 6
+console.log(luckySum(1, 2, 13)) // 3
+console.log(luckySum(1, 13, 3)) // 1
 
 // PROBLEM 5:
 //
@@ -96,9 +121,21 @@ function luckySum(a, b, c){
 // caught_speeding(65, true) → 0
 
 function caught_speeding(speed, is_birthday){
-  //Code Goes Here
+  if (is_birthday)
+    speed -= 5;
+  if (speed <= 60){
+    return 0;
+  } else if ((60 < speed) && (speed <= 80)){
+    return 1;
+  } else if (81 <= speed){
+    return 2;
+  }
 }
 
+console.log(caught_speeding(60, false)) // 0
+console.log(caught_speeding(65, false)) // 1
+console.log(caught_speeding(65, true)) // 0
+console.log(caught_speeding(86, true)) // 2
 
 // BONUS: MAKE BRICKS
 //
@@ -114,5 +151,9 @@ function caught_speeding(speed, is_birthday){
 // makeBricks(3, 2, 10) → true
 
 function makeBricks(small, big, goal){
-  //Code Goes Here
+  return ((5*big+small) >= goal) && ((goal % 5*big) <= small)
 }
+
+console.log(makeBricks(3, 1, 8)) // true
+console.log(makeBricks(3, 1, 9)) // false
+console.log(makeBricks(3, 2, 10)) // true
