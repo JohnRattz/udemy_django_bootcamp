@@ -14,17 +14,17 @@ s = 'django'
 
 # Use indexing to print out the following:
 # 'd'
-
+print(s[0])
 # 'o'
-
+print(s[-1])
 # 'djan'
-
+print(s[0:4])
 # 'jan'
-
+print(s[1:4])
 # 'go'
-
+print(s[4:6])
 # Bonus: Use indexing to reverse the string
-
+print(s[::-1])
 
 ###############
 ## Problem 2 ##
@@ -33,7 +33,8 @@ s = 'django'
 # Given this nested list:
 l = [3,7,[1,4,'hello']]
 # Reassign "hello" to be "goodbye"
-
+l[2][2] = 'goodbye'
+print(l)
 
 ###############
 ## Problem 3 ##

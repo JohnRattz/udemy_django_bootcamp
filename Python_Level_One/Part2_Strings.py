@@ -36,7 +36,7 @@
 
 
 # Be careful with quotes!
-' I'm using single quotes, but will create an error'
+# ' I'm using single quotes, but will create an error'
 
 
 # The reason for the error above is because the single quote in I'm stopped the
@@ -157,8 +157,8 @@ s[::-1]
 
 s
 
-# Let's try to change the first letter to 'x'
-s[0] = 'x'
+# Let's try to change the first letter to 'x' (no item assignment allowed)
+# s[0] = 'x'
 
 
 # Notice how the error tells us directly what we can't do,
@@ -199,19 +199,19 @@ letter*10
 # Here are some examples of built-in methods in strings:
 
 # Upper Case a string
-s.upper()
+print(s.upper())
 
 # Lower case
-s.lower()
+print(s.lower())
 
 # Split a string by blank space (this is the default)
-s.split()
+print(s.split())
 
 # Split by a specific element (doesn't include the element that was split on)
-s.split('W')
+print(s.split('W'))
 
 # There are many more methods than the ones covered here.
-
+print('hello'.capitalize())
 ########################
 ### Print Formatting ###
 ########################

@@ -18,18 +18,33 @@
 # 4. Based on these clues you will guess again until you break the code with a
 #    perfect match!
 
+print("Welcome Code Breaker! Let's see if you can guess my 3 digit number!")
+
 # There are a few things you will have to discover for yourself for this game!
 # Here are some useful hints:
-
-# Try to figure out what this code is doing and how it might be useful to you
 import random
 digits = list(range(10))
 random.shuffle(digits)
-print(digits[:3])
+code = digits[:3]
+print("Code has been genreated, please guess a 3 digit number.")
 
-# Another hint:
-guess = input("What is your guess? ")
-print(guess)
-
-# Think about how you will compare the input to the random number, what format
-# should they be in? Maybe some sort of sequence? Watch the Lecture video for more hints!
+code_matched = False
+while not code_matched:
+    guess = list(map(int,[char for char in input("What is your guess?")]))
+    # Think about how you will compare the input to the random number, what format
+    # should they be in? Maybe some sort of sequence? Watch the Lecture video for more hints!
+    while len(guess) != 3:
+        print("Guess must be three digits long.")
+        guess = list(map(int,list(input("What is your guess?"))))
+    digits_matched = 0
+    for code_digit, guess_digit in zip(code, guess):
+        if guess_digit == code_digit:
+            digits_matched +=1
+            print("Match")
+        elif guess_digit in code:
+            print("Close")
+        else:
+            print("Nope")
+    if digits_matched == 3:
+        code_matched = True
+print("Thanks for playing!")
