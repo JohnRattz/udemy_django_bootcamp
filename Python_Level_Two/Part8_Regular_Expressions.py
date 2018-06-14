@@ -34,15 +34,15 @@ patterns = [ 'term1', 'term2' ]
 text = 'This is a string with term1, but it does not have the other term.'
 
 for pattern in patterns:
-    print 'Searching for "%s" in: \n"%s"' % (pattern, text),
+    print("Searching for '{}' in: \n'{}'".format(pattern, text))
 
     #Check for match
     if re.search(pattern,  text):
-        print '\n'
-        print 'Match was found. \n'
+        print('\n')
+        print('Match was found. \n')
     else:
-        print '\n'
-        print 'No Match was found.\n'
+        print('\n')
+        print('No Match was found.\n')
 
 
 # Now we've seen that re.search() will take the pattern, scan the text, and then
@@ -124,9 +124,9 @@ def multi_re_find(patterns,phrase):
     Prints a list of all matches
     '''
     for pattern in patterns:
-        print 'Searching the phrase using the re check: %r' %pattern
-        print re.findall(pattern,phrase)
-        print '\n'
+        print('Searching the phrase using the re check: %r' % pattern)
+        print(re.findall(pattern,phrase))
+        print('\n')
 
 ##########################
 ### Repetition Syntax ####
@@ -196,7 +196,8 @@ test_phrase = 'This is a string! But it has punctuation. How can we remove it?'
 # to check that the match appears at least once, this basically translate into
 # finding the words.
 
-re.findall('[^!.? ]+',test_phrase)
+# List substrings with no spaces or punctuation.
+print(re.findall('[^!.? ]+',test_phrase))
 
 #############################
 ## Character Ranges #########
