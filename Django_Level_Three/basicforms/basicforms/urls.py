@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from basicapp import views
+from basicapp import views as basicapp_views
 
 urlpatterns = [
-    url(r'^$',views.index,name='index'),
+    url(r'^$', basicapp_views.index, name='index'),
     url(r'^admin/', admin.site.urls),
-    url(r'^formpage/',views.form_name_view,name='form_name')
+    url(r'formpage/', basicapp_views.form_name_view, name='form_name')
 ]
