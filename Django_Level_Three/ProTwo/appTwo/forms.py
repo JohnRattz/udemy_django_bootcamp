@@ -1,7 +1,7 @@
 from django import forms
-from appTwo.models import User
+from AppTwo.models import User
 
 class NewUserForm(forms.ModelForm):
-    class Meta():
+    class Meta: # Omitting parenthesis is OK in Python3.
         model = User
         fields = '__all__'
