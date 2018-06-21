@@ -1,23 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Relative Urls</title>
+    <title></title>
   </head>
   <body>
-    <h1>Welcome!</h1>
-    <p>
-      This page serves as an example of how to
-      use relative urls with templates!
-      This is the relative_url_templates.html file.
-    </p>
-
-    {# Here are the examples:#}
-    {# Must set the app_name=basic_app variable inside the basic_app/urls.py#}
-    <a href="{% url 'admin:index' %}">Link to Admin Page</a>
-
-    <a href="{% url 'basic_app:other' %}">Link to other.html</a>
-
-
+    <h1>Welcome to relative URL templates!</h1>
+    <a href="{% url 'basic_app:other' %}">The 'other' page</a>
+    <!-- This references the index page in `django.contrib.admin` -->
+    <a href="{% url 'admin:index' %}">Link to Admin</a>
+    <a href="{% url 'index' %}">Link to Index</a>
   </body>
 </html>
