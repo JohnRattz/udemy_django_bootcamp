@@ -1,0 +1,6 @@
+name: UdemyDjangoEnv
+channels:
+  - conda-forge
+  - defaults
+prefix: C:\Users\jcrattz\AppData\Local\Continuum\anaconda3\envs\UdemyDjangoEnv
+
