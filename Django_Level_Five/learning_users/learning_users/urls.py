@@ -20,5 +20,8 @@ from basic_app import views as basic_app_views
 urlpatterns = [
     url(r'^$', basic_app_views.index, name='index'),
     url(r'^admin/', admin.site.urls),
-    url(r'^basic_app/', include('basic_app.urls'))
+    url(r'^basic_app/', include('basic_app.urls')),
+    url(r'^register/$', basic_app_views.register, name='register'),
+    url(r'^login/$', basic_app_views.user_login, name='login'),
+    url(r'^logout/$', basic_app_views.user_logout, name='logout')
 ]
