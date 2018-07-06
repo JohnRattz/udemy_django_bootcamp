@@ -86,7 +86,7 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
-
+# The order here is the order the hashers will be tried.
 PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.Argon2PasswordHasher',
     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
