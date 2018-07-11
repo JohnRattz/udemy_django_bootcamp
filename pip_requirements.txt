@@ -1,0 +1,10 @@
+argon2-cffi==18.1.0
+bcrypt==3.1.4
+certifi==2018.4.16
+cffi==1.11.5
+Django==1.11.10
+Pillow==5.2.0
+pycparser==2.18
+pytz==2018.4
+six==1.11.0
+wincertstore==0.2
