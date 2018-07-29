@@ -1,7 +1,6 @@
 from django import forms
 from .models import Post, Comment
 
-# TODO: Add ['post_detail', 'post_list'] url mappings.
 class PostForm(forms.ModelForm):
     class Meta():
         model = Post

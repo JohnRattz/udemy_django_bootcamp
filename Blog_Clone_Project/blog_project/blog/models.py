@@ -27,7 +27,7 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-class Comment(model.Model):
+class Comment(models.Model):
     post = models.ForeignKey('blog.Post', related_name='comments')
     author = models.CharField(max_length=200) # Choose a name - no need to login
     text = models.TextField()
