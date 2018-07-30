@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<h1>New Comment</h1>
+<form class="post-form" method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit" class="save btn btn-default">Post Comment</button>
+</form>
+<script type="text/javascript">
+// Instructions from https://github.com/yabwe/medium-editor.
+// We set the 'text' widget in PostForm to have the '.editable' class.
+var editor = new MediumEditor('.editable');
+</script>
+{% endblock %}

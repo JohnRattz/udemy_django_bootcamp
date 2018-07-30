@@ -7,21 +7,34 @@
 .bigbrand {
   font-size: 1.5em;
 }
-
+.centerstage {
+  margin-left: auto;
+  margin-right: auto;
+}
+.postdate{
+  text-align: center;
+}
+.posttitle{
+  font-family: 'Russo One', sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+.postcontent{
+  font-family: Montserrat;
+  font-size: 1.5em;
+}
+.btn-comment{
+  position: absolute;
+  right: 0px;
+}
 
 /* Begin From https://codepen.io/thapliyalshivam/pen/dvgXVO */
 
 .loader {
-  position:fixed;
-  left:0;
-  right:0;
-  top:0;
-  bottom:0;
   filter:hue-rotate(0deg);
   /* Was background */
   color:linear-gradient(45deg,#0f8,#08f);
-  animation:hue 10000ms infinite linear;
-
+  animation:hue 5000ms infinite linear;
 }
 
 @keyframes spinify {

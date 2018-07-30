@@ -9,7 +9,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
     # The timezone used is specified by `TIME_ZONE` in settings.py.
-    create_date = models.DateTimeField(default=timezone.now())
+    create_date = models.DateTimeField(default=timezone.now)
     # `blank=True` to allow saving posts without publishing.
     # `null=True` to allow saving posts with no publication date.
     published_date = models.DateTimeField(blank=True,null=True)
@@ -31,7 +31,7 @@ class Comment(models.Model):
     post = models.ForeignKey('blog.Post', related_name='comments')
     author = models.CharField(max_length=200) # Choose a name - no need to login
     text = models.TextField()
-    create_date = models.DateTimeField(default=timezone.now())
+    create_date = models.DateTimeField(default=timezone.now)
     approved_comment = models.BooleanField(default=False)
 
     def approve(self):
